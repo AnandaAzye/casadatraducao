@@ -1,0 +1,69 @@
+.about-container{
+    position:relative;
+    .about-container__content {
+        padding: 2rem 0;
+        h1{
+            font-family: $font-Montserrat;
+            font-weight: 500;
+            font-size: 2.7rem;
+            line-height: 40px;
+         span{
+            color: $pink;
+            display: block;
+            font-weight: bold;
+         }
+
+        }
+        .about-container__text{
+            font-family: $font-Montserrat;
+            padding: 1.2rem 0 .7rem 0;
+        }
+        @keyframes arrow {
+            from{
+                left: 10px;
+            }
+            to{
+                left: 0px;
+            }
+        }
+        a{
+            display: flex;
+            align-items: center;
+            color: rgba(187, 187, 187, 0.69);
+            cursor: pointer;
+            p{
+                font-family: $font-Montserrat;
+                transition: $transion;
+            }
+            img{
+                transform: scale(.7);
+            }
+            &:hover{
+                p{
+                    color: $pink;
+                }
+                img{
+                    position: relative;
+                    animation: arrow ;
+                    animation-duration: .9s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
+                }
+            }
+        }
+
+
+    }
+    &::after{
+        content: '';
+        width: 40%;
+        height: 100%;
+        background-color: $pink;
+        clip-path: polygon(31% 0, 100% 0, 100% 100%, 0% 100%);
+        position: absolute;
+        right: 0px;
+        top: 0;
+    }
+
+}

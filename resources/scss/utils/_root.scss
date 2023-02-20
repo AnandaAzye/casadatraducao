@@ -1,0 +1,30 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: $font-ruby;
+}
+.container-main{
+    max-width: 1350px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.default-button{
+    button{
+         padding: .6rem 2.5rem  ;
+         border: none;
+         background: #ED1556;
+         color: white;
+         font-size: 17px;
+         border-radius: 30px;
+        font-weight: bold;
+        transition: $transion;
+        cursor: pointer;
+        &:hover{
+            background: white;
+            color: #ED1556;
+
+        }
+    }
+}

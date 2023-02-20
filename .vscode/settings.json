@@ -1,0 +1,6 @@
+{
+    "liveServer.settings.ChromeDebuggingAttachment": false,
+    "prettier.endOfLine": "crlf",
+    "editor.columnSelection": false,
+    "files.eol": "\r\n"
+}
