@@ -15,6 +15,7 @@
    @include('site.includes.header')
    @yield('content')
    @include('site.includes.script')
+   @include('site.includes.footer')
 
 
 </body>

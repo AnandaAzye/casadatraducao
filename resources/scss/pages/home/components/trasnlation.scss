@@ -1,0 +1,57 @@
+.container-translation{
+    background: $pink;
+    font-family: $font-Montserrat;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+
+
+    h2{
+        font-size: 2.4rem;
+    }
+    .container-trasnlation__languages{
+        display: flex;
+        justify-content: center;
+        p{
+            opacity: 50%;
+            padding: 1rem 0;
+        }
+        p + p{
+            margin-left: 1rem;
+        }
+
+    }
+
+    button{
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 30px;
+        background: white;
+        color: $pink;
+        font-family: $font-Montserrat;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: $transion;
+        &:hover{
+            background-color: $pink;
+            color: white;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        }
+    }
+}
+ @media(max-width: 730px){
+    .container-translation .container-trasnlation__languages{
+        display: none;
+    }
+    .container-translation h2{
+        padding-bottom: 1rem ;
+    }
+ }
+
+ @media(max-width:480px){
+    .container-translation h2{
+        font-size: 2.1rem;
+        text-align: center;
+    }
+ }

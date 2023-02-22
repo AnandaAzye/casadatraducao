@@ -6,6 +6,6 @@
 @include('site.pages.home.services')
 @include('site.pages.home.reviews')
 @include('site.pages.home.partners')
-@include('site.pages.home.needTranslation')
+@include('site.pages.home.translation')
 @endsection
 

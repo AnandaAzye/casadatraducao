@@ -19527,6 +19527,17 @@ var swiper2 = new Swiper('.swiper.partners', {
 
 /***/ }),
 
+/***/ "./resources/scss/pages/about/index.scss":
+/*!***********************************************!*\
+  !*** ./resources/scss/pages/about/index.scss ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/scss/pages/home/index.scss":
 /*!**********************************************!*\
   !*** ./resources/scss/pages/home/index.scss ***!
@@ -19538,15 +19549,28 @@ var swiper2 = new Swiper('.swiper.partners', {
 
 /***/ }),
 
+/***/ "./resources/scss/pages/service/index.scss":
+/*!*************************************************!*\
+  !*** ./resources/scss/pages/service/index.scss ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!**************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/scss/pages/home/index.scss ***!
-  \**************************************************************************/
+/*!************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/scss/pages/home/index.scss ./resources/scss/pages/about/index.scss ./resources/scss/pages/service/index.scss ***!
+  \************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\scss\pages\home\index.scss */"./resources/scss/pages/home/index.scss");
+__webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\scss\pages\home\index.scss */"./resources/scss/pages/home/index.scss");
+__webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\scss\pages\about\index.scss */"./resources/scss/pages/about/index.scss");
+module.exports = __webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\scss\pages\service\index.scss */"./resources/scss/pages/service/index.scss");
 
 
 /***/ })

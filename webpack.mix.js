@@ -13,7 +13,7 @@ const compress_images = require('compress-images');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js').sass('resources/scss/pages/home/index.scss', 'public/css/home');
+mix.js('resources/js/app.js', 'public/js').sass('resources/scss/pages/home/index.scss', 'public/css/home').sass('resources/scss/pages/about/index.scss', 'public/css/about').sass('resources/scss/pages/service/index.scss', 'public/css/service');
 
 
 mix.then(() => {

@@ -1,0 +1,99 @@
+.container-footer{
+    font-family: $font-Montserrat;
+    padding: 3rem 0;
+
+    a{
+        text-decoration: none;
+        display: block;
+        font-family: $font-Montserrat;
+        text-decoration: none;
+        color: black;
+    }
+    .social-midia{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 150px;
+        padding-top: 2rem;
+        a{
+            width: 30px;
+            height: 30px;
+            display: block;
+            transform: scale(1.3);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $pink;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+            transition: $transion;
+            transform: scale(.989);
+            &:hover{
+                transform: scale(.977);
+            }
+            img{
+
+                object-fit: contain;
+            }
+        }
+
+    }
+    .container-main{
+        display: flex;
+        justify-content: space-between;
+        .footer-item{
+            max-width: 350px;
+            ul{
+                li{
+                    position: relative;
+                    margin-bottom: 1.3rem;
+                    display: flex;
+                    align-items: center;
+                    &::after{
+                        content: '';
+                        width: 20px;
+                        height: 20px;
+                        background: url('../../../img/global/arrow-footer.png') no-repeat;
+                        position:absolute;
+                        top: 0;
+                        left: -15px;
+                    }
+                    list-style: none;
+                }
+            }
+        }
+        .loc{
+            font-family: $font-Montserrat;
+            h3{
+                padding-bottom: .5rem;
+            }
+            a{
+                display: flex;
+                align-items: center;
+                img{
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                }
+            }
+            p{
+                margin-bottom: .5rem;
+            }
+            a + a {
+                margin-top: .5rem;
+            }
+        }
+
+
+    }
+}
+
+.container-copy{
+    background: $pink;
+    text-align: center;
+    padding: 2rem 0;
+    font-family: $font-Montserrat;
+    color: white;
+    font-size: 14px;
+
+}
