@@ -1,0 +1,35 @@
+.container-partners{
+    padding: 2rem 0;
+    .container-partners__title{
+        font-size: 2.4rem;
+        text-align: center;
+        color: $pink;
+        font-family: $font-Montserrat;
+        padding-bottom: 2rem;
+    }
+    .container-partners__slide{
+        max-width: 900px;
+        margin: 0 auto;
+        .swiper.partners{
+            height: 140px;
+        }
+        .swiper-slide{
+
+            text-align: center;
+        }
+
+        .swiper .swiper-pagination-bullet {
+            background: transparent;
+            border: 1px solid $pink;
+            width: 12px;
+            height: 12px;
+        }
+        .swiper .swiper-pagination-bullet-active{
+            background-color: $pink;
+        }
+        .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after, .swiper-button-next:after, .swiper-button-prev:after{
+            color: $pink;
+        }
+    }
+
+}

@@ -19449,6 +19449,16 @@ var menuMobile = function menuMobile() {
 };
 menuMobile();
 console.log('sddnklfn');
+setTimeout(function () {
+  var reviewCopy = document.querySelector('a[href="https://elfsight.com/google-reviews-widget/?utm_source=websites&utm_medium=clients&utm_content=google-reviews&utm_term=127.0.0.1&utm_campaign=free-widget"]');
+  var button = document.querySelector('.kBUAPv');
+  console.log(button);
+  button.innerHTML = 'Ver mais';
+  button.classList.add('button__review');
+  reviewCopy.style.display = "none";
+  var gridReviews = document.querySelector('.Grid__GridContainer-zyt552-0');
+  gridReviews.classList.add('container-review__controll');
+}, 2000);
 
 /***/ }),
 
@@ -19480,6 +19490,41 @@ var swiper = new Swiper('.swiper', {
   // },
 });
 
+var swiper2 = new Swiper('.swiper.partners', {
+  // Optional parameters
+  direction: 'horizontal',
+  slidesPerView: 3,
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  breakpoints: {
+    // when window width is <= 499px
+    0: {
+      slidesPerView: 1
+    },
+    730: {
+      slidesPerView: 2
+    },
+    // when window width is <= 999px
+    1000: {
+      slidesPerView: 3,
+      spaceBetweenSlides: 0
+    }
+  }
+
+  // And if we need scrollbar
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  // },
+});
+
 /***/ }),
 
 /***/ "./resources/scss/pages/home/index.scss":
@@ -19500,8 +19545,8 @@ var swiper = new Swiper('.swiper', {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Programas\XAMPP\htdocs\casadatraducao\casadatraducao\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\Programas\XAMPP\htdocs\casadatraducao\casadatraducao\resources\scss\pages\home\index.scss */"./resources/scss/pages/home/index.scss");
+__webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\scss\pages\home\index.scss */"./resources/scss/pages/home/index.scss");
 
 
 /***/ })

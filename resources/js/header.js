@@ -16,3 +16,17 @@ const menuMobile = () =>{
 menuMobile();
 
 console.log('sddnklfn')
+
+
+setTimeout(() =>{
+    let reviewCopy = document.querySelector('a[href="https://elfsight.com/google-reviews-widget/?utm_source=websites&utm_medium=clients&utm_content=google-reviews&utm_term=127.0.0.1&utm_campaign=free-widget"]');
+    let button = document.querySelector('.kBUAPv');
+    console.log(button)
+    button.innerHTML = 'Ver mais'
+    button.classList.add('button__review')
+    reviewCopy.style.display = "none";
+    let gridReviews = document.querySelector('.Grid__GridContainer-zyt552-0');
+    gridReviews.classList.add('container-review__controll')
+}, 2000)
+
+

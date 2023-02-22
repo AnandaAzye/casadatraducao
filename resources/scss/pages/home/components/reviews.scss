@@ -1,0 +1,57 @@
+.container-reviews{
+    padding: 2rem 0;
+    .container-reviews__title{
+        font-size: 2.4rem;
+        font-size: $font-Montserrat;
+        color: $pink;
+        position: relative;
+        padding-left: 10px;
+        &::after{
+            content: '';
+            width: 5px;
+            height: 100%;
+            background-color: $pink;
+            position: absolute;
+            left: 0;
+        }
+    }
+    .WidgetTitle__Container-sc-173f1y-0, .HeaderContainer__Inner-sc-pny2b8-0.gNtCnN.Header__StyledHeaderContainer-sc-gozq6j-0.LayoutDefault__StyledHeader-sc-1ydej6v-1.gGgqlY{
+        display: none;
+    }
+    a[href="https://elfsight.com/google-reviews-widget/?utm_source=websites&utm_medium=clients&utm_content=google-reviews&utm_term=127.0.0.1&utm_campaign=free-widget"]{
+        display: none;
+    }
+    .button__review{
+        padding: 1rem 2rem;
+        background-color: $pink !important;
+        border-radius: 5px;
+        font-weight: bold;
+        color: white !important;
+        font-family: $font-Montserrat !important;
+        font-size: 1rem;
+        transition: $transion;
+        &:hover{
+            transform: scale(.9);
+        }
+
+    }
+    .gBQoNy{
+        display: flex !important;
+        flex-direction: column;
+    }
+
+
+   @media(max-width:1000px){
+    .container-review__controll{
+        grid-template-columns: repeat(2, minmax(0px, 1fr)) !important;
+         gap: 20px;
+    }
+   }
+
+    @media(max-width:750px){
+        .container-review__controll{
+         grid-template-columns: repeat(1, minmax(0px, 1fr)) !important;
+        }
+
+    }
+}
