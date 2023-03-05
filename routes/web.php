@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Home;
 use App\Http\Controllers\About;
 use App\Http\Controllers\Service;
+use App\Http\Controllers\Faq;
+use App\Http\Controller\Contato;
+
+use App\Http\Controllers\ContactController;
 use App\Models\Post;
 
 
@@ -21,6 +25,10 @@ use App\Models\Post;
 Route::get('/', [Home::class, 'home'])->name('index');
 Route::get('/quem-somos', [About::class, 'about'])->name('about');
 Route::get('/servicos', [Service::class, 'service']) ->name('service');
+Route::get('/faq', [Faq::class, 'faq']) ->name('faq');
+Route::resource('/contato', ContactController::class);
+
+
 
 
 

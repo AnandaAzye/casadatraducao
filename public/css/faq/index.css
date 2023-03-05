@@ -275,6 +275,199 @@ button.nav-header_button-mobile {
   color: #ED1556;
 }
 
+.container-breadcrumb {
+  background: #ED1556;
+  padding: 4.5rem 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container-breadcrumb .breadcrumb-content {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  position: relative;
+  color: white;
+}
+
+.container-breadcrumb .breadcrumb-content ul {
+  display: flex;
+  position: relative;
+  z-index: 1000;
+}
+
+.container-breadcrumb .breadcrumb-content ul li {
+  list-style: none;
+}
+
+.container-breadcrumb .breadcrumb-content ul li a {
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  color: white;
+}
+
+.container-breadcrumb .breadcrumb-content ul li + li {
+  margin-left: 30px;
+  list-style: disc;
+}
+
+.container-breadcrumb .breadcrumb-content h1 {
+  text-align: center;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  z-index: 1;
+}
+
+@media (max-width: 730px) {
+  .container-breadcrumb .breadcrumb-content h1 {
+    position: inherit;
+    margin-top: 0.5rem;
+  }
+
+  .breadcrumb-content {
+    flex-direction: column;
+  }
+}
+
+.container-faq {
+  padding: 2rem 0;
+}
+
+.container-faq .card {
+  transition: 0.3s ease-in-out;
+  margin-bottom: 0.7rem;
+}
+
+.container-faq .card .container-title {
+  display: flex;
+  align-items: center;
+  background: #ED1556;
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  color: white;
+  position: relative;
+}
+
+.container-faq .card .container-title span {
+  opacity: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container-faq .card .container-title h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.container-faq .card .container-title button {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+}
+
+.container-faq .card .container-title button .btn-card {
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.container-faq .card .container-title button .btn-card div svg {
+  transform: scale(1.3);
+}
+
+.container-faq .card .container-content p {
+  font-size: 14px;
+  height: 0px;
+  overflow: hidden;
+}
+
+.container-faq .card.ativo {
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.container-faq .card.ativo .container-title {
+  color: black;
+  background: white;
+}
+
+.container-faq .card.ativo .container-title button {
+  background: white;
+  transform: rotate(180deg);
+}
+
+.container-faq .card.ativo .container-title button .btn-card {
+  background: #ED1556;
+}
+
+.container-faq .card.ativo .container-title button .btn-card svg path {
+  fill: white;
+}
+
+.container-faq .card.ativo .container-title span {
+  opacity: 20%;
+}
+
+.container-faq .card.ativo .container-content p {
+  height: 100%;
+  overflow: auto;
+  padding: 1rem;
+}
+
+@media (max-width: 670px) {
+  .container-faq .card .container-title h2 {
+    font-size: 1.3rem;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 550px) {
+  .container-faq .card .container-title h2 {
+    font-size: 1.1rem;
+    max-width: 300px;
+  }
+
+  .container-faq .card .container-title span {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .container-faq .card .container-title h2 {
+    font-size: 0.9rem;
+    max-width: 270px;
+  }
+
+  .container-faq .card .container-title span {
+    display: none;
+  }
+}
+
+@media (max-width: 370px) {
+  .container-faq .card .container-title h2 {
+    font-size: 0.9rem;
+    max-width: 230px;
+  }
+
+  .container-faq .card .container-title span {
+    display: none;
+  }
+}
+
 .container-footer {
   font-family: "Montserrat", sans-serif;
   padding: 3rem 0;
@@ -391,65 +584,6 @@ button.nav-header_button-mobile {
 
   .container-footer .container-main .footer-item {
     text-align: center;
-  }
-}
-
-.container-breadcrumb {
-  background: #ED1556;
-  padding: 4.5rem 0;
-  font-family: "Montserrat", sans-serif;
-}
-
-.container-breadcrumb .breadcrumb-content {
-  display: flex;
-  align-items: center;
-  max-width: 100%;
-  position: relative;
-  color: white;
-}
-
-.container-breadcrumb .breadcrumb-content ul {
-  display: flex;
-  position: relative;
-  z-index: 1000;
-}
-
-.container-breadcrumb .breadcrumb-content ul li {
-  list-style: none;
-}
-
-.container-breadcrumb .breadcrumb-content ul li a {
-  text-decoration: none;
-  font-family: "Rubik", sans-serif;
-  color: white;
-}
-
-.container-breadcrumb .breadcrumb-content ul li + li {
-  margin-left: 30px;
-  list-style: disc;
-}
-
-.container-breadcrumb .breadcrumb-content h1 {
-  text-align: center;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 2.4rem;
-  z-index: 1;
-}
-
-@media (max-width: 730px) {
-  .container-breadcrumb .breadcrumb-content h1 {
-    position: inherit;
-    margin-top: 0.5rem;
-  }
-
-  .breadcrumb-content {
-    flex-direction: column;
   }
 }
 

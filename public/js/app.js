@@ -19384,7 +19384,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_header__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _slide__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./slide */ "./resources/js/slide.js");
 /* harmony import */ var _slide__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_slide__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _faq__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./faq */ "./resources/js/faq.js");
+/* harmony import */ var _faq__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_faq__WEBPACK_IMPORTED_MODULE_2__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
 
 
 
@@ -19427,6 +19430,31 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/js/faq.js":
+/*!*****************************!*\
+  !*** ./resources/js/faq.js ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var button = document.querySelectorAll('.btn-card');
+var card = document.querySelectorAll('.card');
+card.forEach(function (card, indexC) {
+  button.forEach(function (item, index) {
+    item.addEventListener('click', function () {
+      if (index === indexC) {
+        if (card.classList.contains('ativo')) {
+          card.classList.remove('ativo');
+        } else {
+          card.classList.add('ativo');
+        }
+      }
+    });
+  });
+});
+
+/***/ }),
+
 /***/ "./resources/js/header.js":
 /*!********************************!*\
   !*** ./resources/js/header.js ***!
@@ -19452,12 +19480,13 @@ console.log('sddnklfn');
 setTimeout(function () {
   var reviewCopy = document.querySelector('a[href="https://elfsight.com/google-reviews-widget/?utm_source=websites&utm_medium=clients&utm_content=google-reviews&utm_term=127.0.0.1&utm_campaign=free-widget"]');
   var button = document.querySelector('.kBUAPv');
-  console.log(button);
-  button.innerHTML = 'Ver mais';
-  button.classList.add('button__review');
-  reviewCopy.style.display = "none";
-  var gridReviews = document.querySelector('.Grid__GridContainer-zyt552-0');
-  gridReviews.classList.add('container-review__controll');
+  if (reviewCopy) {
+    button.innerHTML = 'Ver mais';
+    button.classList.add('button__review');
+    reviewCopy.style.display = "none";
+    var gridReviews = document.querySelector('.Grid__GridContainer-zyt552-0');
+    gridReviews.classList.add('container-review__controll');
+  }
 }, 2000);
 
 /***/ }),
@@ -19538,6 +19567,28 @@ var swiper2 = new Swiper('.swiper.partners', {
 
 /***/ }),
 
+/***/ "./resources/scss/pages/contato/index.scss":
+/*!*************************************************!*\
+  !*** ./resources/scss/pages/contato/index.scss ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/scss/pages/faq/index.scss":
+/*!*********************************************!*\
+  !*** ./resources/scss/pages/faq/index.scss ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/scss/pages/home/index.scss":
 /*!**********************************************!*\
   !*** ./resources/scss/pages/home/index.scss ***!
@@ -19561,16 +19612,18 @@ var swiper2 = new Swiper('.swiper.partners', {
 /***/ }),
 
 /***/ 0:
-/*!************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/scss/pages/home/index.scss ./resources/scss/pages/about/index.scss ./resources/scss/pages/service/index.scss ***!
-  \************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/scss/pages/home/index.scss ./resources/scss/pages/about/index.scss ./resources/scss/pages/service/index.scss ./resources/scss/pages/faq/index.scss ./resources/scss/pages/contato/index.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\scss\pages\home\index.scss */"./resources/scss/pages/home/index.scss");
 __webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\scss\pages\about\index.scss */"./resources/scss/pages/about/index.scss");
-module.exports = __webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\scss\pages\service\index.scss */"./resources/scss/pages/service/index.scss");
+__webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\scss\pages\service\index.scss */"./resources/scss/pages/service/index.scss");
+__webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\scss\pages\faq\index.scss */"./resources/scss/pages/faq/index.scss");
+module.exports = __webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\scss\pages\contato\index.scss */"./resources/scss/pages/contato/index.scss");
 
 
 /***/ })

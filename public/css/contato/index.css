@@ -275,6 +275,340 @@ button.nav-header_button-mobile {
   color: #ED1556;
 }
 
+.container-breadcrumb {
+  background: #ED1556;
+  padding: 4.5rem 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container-breadcrumb .breadcrumb-content {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  position: relative;
+  color: white;
+}
+
+.container-breadcrumb .breadcrumb-content ul {
+  display: flex;
+  position: relative;
+  z-index: 1000;
+}
+
+.container-breadcrumb .breadcrumb-content ul li {
+  list-style: none;
+}
+
+.container-breadcrumb .breadcrumb-content ul li a {
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  color: white;
+}
+
+.container-breadcrumb .breadcrumb-content ul li + li {
+  margin-left: 30px;
+  list-style: disc;
+}
+
+.container-breadcrumb .breadcrumb-content h1 {
+  text-align: center;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  z-index: 1;
+}
+
+@media (max-width: 730px) {
+  .container-breadcrumb .breadcrumb-content h1 {
+    position: inherit;
+    margin-top: 0.5rem;
+  }
+
+  .breadcrumb-content {
+    flex-direction: column;
+  }
+}
+
+.contact {
+  padding: 3rem 0;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.contact .container-main {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact .contact-title {
+  font-size: 2.4rem;
+  color: #ED1556;
+  margin-bottom: 0.5rem;
+}
+
+.contact .container-form {
+  max-width: 100%;
+  display: flex;
+}
+
+.contact .container-form form {
+  width: 65%;
+}
+
+.contact .container-form form input,
+.contact .container-form form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 5px;
+  border: 1px solid gray;
+  margin-top: 0.7rem;
+}
+
+.contact .container-form form input::-moz-placeholder, .contact .container-form form textarea::-moz-placeholder {
+  color: #ED1556;
+  font-size: 14px;
+}
+
+.contact .container-form form input::placeholder,
+.contact .container-form form textarea::placeholder {
+  color: #ED1556;
+  font-size: 14px;
+}
+
+.contact .container-form form textarea {
+  max-height: 170px;
+  max-width: 698px;
+}
+
+.contact .container-form form span {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contact .container-form form span label {
+  width: 100%;
+}
+
+.contact .container-form form span label + label {
+  margin-left: 0.7rem;
+}
+
+.contact .container-form form span input {
+  width: 100%;
+}
+
+.contact .container-form form .submit {
+  margin-top: 2rem;
+  max-width: 200px;
+  padding: 1rem;
+  border-radius: 5px;
+  color: white;
+  background-color: #ED1556;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  border: none;
+}
+
+.contact .container-form form .submit:hover {
+  color: #ED1556;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+.contact .container-form .contact-info {
+  align-self: flex-end;
+  margin-left: 2rem;
+  margin-bottom: 5rem;
+}
+
+.contact .container-form .contact-info a {
+  background-color: white;
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #ED1556;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+}
+
+.contact .container-form .contact-info a .contact-info__text {
+  font-size: 16px;
+}
+
+.contact .container-form .contact-info a svg {
+  width: 50px;
+  height: 50px;
+}
+
+.contact .container-form .contact-info a svg path {
+  fill: #ED1556;
+  transition: 0.3s ease-in-out;
+}
+
+.contact .container-form .contact-info a:hover {
+  background-color: #ED1556;
+  color: white;
+  transform: scale(0.977);
+}
+
+.contact .container-form .contact-info a:hover svg path {
+  fill: white;
+}
+
+.contact .container-form .contact-info a + a {
+  margin-top: 1rem;
+}
+
+.contact::after {
+  content: "";
+  width: 50%;
+  height: 100%;
+  margin-bottom: auto;
+  border-radius: 0 10px 10px 0;
+  background: white;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  box-shadow: 0px 30px 40px -20px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 945px) {
+  .contact .container-form {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .contact .container-form .contact-info {
+    display: flex;
+    align-self: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .contact .container-form .contact-info a {
+    width: 300px;
+  }
+
+  .contact .container-form .contact-info a + a {
+    margin-top: 0px;
+    margin-left: 0.5rem;
+  }
+
+  .contact::after {
+    display: none;
+  }
+
+  .contact .container-form form {
+    width: 100%;
+  }
+
+  .contact .container-form form textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 690px) {
+  .contact .container-form .contact-info a + a {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .contact .container-form .contact-info {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact .container-form form span {
+    flex-direction: column;
+  }
+
+  .contact .container-form form span label + label {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact .contact-title {
+    font-size: 2.1rem;
+  }
+}
+
+.container-about {
+  padding: 2rem 0;
+}
+
+.container-about h2 {
+  color: #ED1556;
+  font-size: 2.4rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container-about p {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  margin-bottom: 2rem;
+  padding: 0.5rem 0;
+}
+
+.container-about__cta {
+  background: #ED1556;
+  padding: 2rem 0;
+}
+
+.container-about__cta .container-main {
+  text-align: center;
+}
+
+.container-about__cta .container-main h2 {
+  font-size: 2.4rem;
+  color: white;
+  padding: 0rem 0 1rem 0;
+}
+
+.container-about__cta .container-main img {
+  transform: scale(0.8);
+}
+
+.container-about__cta .container-main button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #ED1556;
+  background: white;
+}
+
+.container-about__cta .container-main button:hover {
+  background-color: #ED1556;
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+@media (max-width: 480px) {
+  .container-about h2 {
+    font-size: 2.1rem;
+  }
+
+  .container-about__cta .container-main h2 {
+    font-size: 2.1rem;
+  }
+}
+
 .container-footer {
   font-family: "Montserrat", sans-serif;
   padding: 3rem 0;
@@ -392,244 +726,5 @@ button.nav-header_button-mobile {
   .container-footer .container-main .footer-item {
     text-align: center;
   }
-}
-
-.container-breadcrumb {
-  background: #ED1556;
-  padding: 4.5rem 0;
-  font-family: "Montserrat", sans-serif;
-}
-
-.container-breadcrumb .breadcrumb-content {
-  display: flex;
-  align-items: center;
-  max-width: 100%;
-  position: relative;
-  color: white;
-}
-
-.container-breadcrumb .breadcrumb-content ul {
-  display: flex;
-  position: relative;
-  z-index: 1000;
-}
-
-.container-breadcrumb .breadcrumb-content ul li {
-  list-style: none;
-}
-
-.container-breadcrumb .breadcrumb-content ul li a {
-  text-decoration: none;
-  font-family: "Rubik", sans-serif;
-  color: white;
-}
-
-.container-breadcrumb .breadcrumb-content ul li + li {
-  margin-left: 30px;
-  list-style: disc;
-}
-
-.container-breadcrumb .breadcrumb-content h1 {
-  text-align: center;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 2.4rem;
-  z-index: 1;
-}
-
-@media (max-width: 730px) {
-  .container-breadcrumb .breadcrumb-content h1 {
-    position: inherit;
-    margin-top: 0.5rem;
-  }
-
-  .breadcrumb-content {
-    flex-direction: column;
-  }
-}
-
-.container-about {
-  padding: 2rem 0;
-}
-
-.container-about h2 {
-  color: #ED1556;
-  font-size: 2.4rem;
-  font-family: "Montserrat", sans-serif;
-}
-
-.container-about p {
-  font-family: "Montserrat", sans-serif;
-  color: black;
-  margin-bottom: 2rem;
-  padding: 0.5rem 0;
-}
-
-.container-about__cta {
-  background: #ED1556;
-  padding: 2rem 0;
-}
-
-.container-about__cta .container-main {
-  text-align: center;
-}
-
-.container-about__cta .container-main h2 {
-  font-size: 2.4rem;
-  color: white;
-  padding: 0rem 0 1rem 0;
-}
-
-.container-about__cta .container-main img {
-  transform: scale(0.8);
-}
-
-.container-about__cta .container-main button {
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  font-size: 1rem;
-  color: #ED1556;
-  background: white;
-}
-
-.container-about__cta .container-main button:hover {
-  background-color: #ED1556;
-  color: white;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-}
-
-@media (max-width: 480px) {
-  .container-about h2 {
-    font-size: 2.1rem;
-  }
-
-  .container-about__cta .container-main h2 {
-    font-size: 2.1rem;
-  }
-}
-
-.container-service {
-  padding: 3rem 0;
-}
-
-.container-service h2 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 2.4rem;
-}
-
-.container-service h2 span {
-  display: block;
-  color: #ED1556;
-}
-
-.container-service .card-service {
-  display: flex;
-  justify-content: space-around;
-  max-width: 990px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-}
-
-.container-service .card-service .card {
-  position: relative;
-  height: 200px;
-  width: 300px;
-  margin-top: 2rem;
-  border-radius: 15px;
-  padding: 2rem;
-  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
-  transition: 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-.container-service .card-service .card h3 {
-  color: #ED1556;
-  font-size: 1.3rem;
-  display: block;
-  position: relative;
-  transition: 0.3s ease-in-out;
-}
-
-.container-service .card-service .card h3::after {
-  content: "";
-  width: 4px;
-  height: 100%;
-  background-color: #ED1556;
-  left: -10px;
-  top: 0;
-  position: absolute;
-  transition: 0.3s ease-in-out;
-}
-
-.container-service .card-service .card a {
-  position: absolute;
-  bottom: 10px;
-  left: 1rem;
-  display: block;
-  display: flex;
-  text-decoration: none;
-  transition: 0.3s ease-in-out;
-}
-
-.container-service .card-service .card a span {
-  background-color: #ED1556;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.3s ease-in-out;
-}
-
-.container-service .card-service .card a span img {
-  transform: scale(0.6);
-  filter: brightness(0) invert(1);
-  transition: 0.3s ease-in-out;
-}
-
-.container-service .card-service .card a button {
-  background-color: transparent;
-  color: #ED1556;
-  border: none;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-left: 10px;
-  transition: 0.3s ease-in-out;
-}
-
-.container-service .card-service .card:hover {
-  background-color: #ED1556;
-  transform: scale(0.979);
-}
-
-.container-service .card-service .card:hover h3 {
-  color: white;
-}
-
-.container-service .card-service .card:hover h3::after {
-  background-color: white;
-}
-
-.container-service .card-service .card:hover a span {
-  background-color: white;
-}
-
-.container-service .card-service .card:hover a span img {
-  filter: initial;
-}
-
-.container-service .card-service .card:hover a button {
-  color: white;
 }
 

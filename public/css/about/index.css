@@ -442,6 +442,17 @@ button.nav-header_button-mobile {
   font-size: 14px;
 }
 
+@media (max-width: 730px) {
+  .container-footer .container-main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-footer .container-main .footer-item {
+    text-align: center;
+  }
+}
+
 .container-about {
   padding: 2rem 0;
 }

@@ -36,7 +36,7 @@
             </ul>
             </div>
             <div class="footer-item loc">
-                <h3>A onde estamos</h3>
+                <h3>Aonde estamos</h3>
 
                     <p>Lorem ipsum, dolor sit amet conse
                         adipisicing elit. Voluptate magnam

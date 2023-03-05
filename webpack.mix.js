@@ -13,11 +13,16 @@ const compress_images = require('compress-images');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js').sass('resources/scss/pages/home/index.scss', 'public/css/home').sass('resources/scss/pages/about/index.scss', 'public/css/about').sass('resources/scss/pages/service/index.scss', 'public/css/service');
+mix.js('resources/js/app.js', 'public/js').sass('resources/scss/pages/home/index.scss', 'public/css/home').sass('resources/scss/pages/about/index.scss', 'public/css/about').sass('resources/scss/pages/service/index.scss', 'public/css/service').sass('resources/scss/pages/faq/index.scss', 'public/css/faq').sass('resources/scss/pages/contato/index.scss', 'public/css/contato');
 
 
 mix.then(() => {
-    minifier.minify('public/css/home/index.css')
+    minifier.minify('public/css/home/index.css'),
+    minifier.minify('public/css/about/index.css'),
+    minifier.minify('public/css/service/index.css'),
+    minifier.minify('public/css/faq/index.css'),
+    minifier.minify('public/css/contato/index.css')
+
  })
 
 compress_images('resources/img/**/*.{jpg,JPG,jpeg,JPEG,gif,png,svg}', 'public/img/', {compress_force: false, statistic: true, autoupdate: true}, false,

@@ -1,0 +1,181 @@
+.contact{
+    padding: 3rem 0;
+    position: relative;
+    margin-bottom: 3rem;
+    .container-main{
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .contact-title{
+        font-size: 2.4rem;
+        color: $pink;
+        margin-bottom: .5rem;
+    }
+    .container-form{
+        max-width: 100%;
+        display: flex;
+        form{
+            width: 65%;
+            input, textarea{
+                width: 100%;
+                padding: .7rem;
+                border-radius: 5px;
+                border: 1px solid gray;
+                margin-top: .7rem;
+                &::placeholder{
+                    color: $pink;
+                    font-size: 14px;
+                }
+            }
+            textarea{
+                max-height: 170px;
+                max-width: 698px;
+
+            }
+            span{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+
+                label{
+                    width:100%;
+                }
+                label + label{
+                    margin-left: .7rem;
+                }
+                input{
+                    width: 100%;
+                }
+
+            }
+            .submit{
+                margin-top: 2rem;
+                max-width: 200px;
+                padding: 1rem;
+                border-radius: 5px;
+                color:white;
+                background-color: $pink;
+                font-weight: bold;
+                transition: $transion;
+                cursor: pointer;
+                border: none;
+                &:hover{
+                    color: $pink;
+                    background-color: white;
+                    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+                }
+            }
+        }
+        .contact-info{
+            align-self: flex-end;
+            margin-left: 2rem;
+            margin-bottom: 5rem;
+            a{
+                background-color: white;
+                width: 100%;
+                padding: 1rem 2rem;
+                border-radius: 5px;
+                text-decoration: none;
+                color: $pink;
+                box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+                display: flex;
+                align-items: center;
+                transition: $transion;
+                .contact-info__text{
+                    font-size: 16px;
+                }
+                svg{
+                    width: 50px;
+                    height: 50px;
+                    path{
+                        fill: $pink;
+                        transition: $transion;
+                    }
+                }
+                &:hover{
+                    background-color: $pink;
+                    color: white;
+                    transform: scale(.977);
+                    svg{
+                        path{
+                            fill: white;
+                        }
+                    }
+                }
+            }
+            a + a{
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    &::after{
+        content: '';
+        width: 50%;
+        height: 100%;
+        margin-bottom: auto;
+        border-radius: 0 10px 10px 0;
+        background: white;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        box-shadow: 0px 30px 40px -20px rgba(0, 0, 0, 0.25);
+    }
+
+}
+
+@media (max-width:945px){
+    .contact .container-form{
+        flex-direction: column;
+        justify-content: space-around;
+
+    }
+    .contact .container-form .contact-info{
+        display: flex;
+        align-self: center;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+        a{
+            width: 300px;
+        }
+        a + a{
+            margin-top: 0px;
+            margin-left: .5rem;
+        }
+    }
+    .contact::after{
+        display: none;
+    }
+    .contact .container-form form{
+        width: 100%;
+        textarea{
+            width: 100%;
+            max-width: 100%;
+
+        }
+    }
+
+}
+@media (max-width:690px){
+    .contact .container-form .contact-info a + a{
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+    .contact .container-form .contact-info{
+        justify-content: center;
+
+    }
+}
+@media (max-width:480px){
+    .contact .container-form form span{
+        flex-direction: column;
+    }
+    .contact .container-form form span label + label{
+        margin-left: 0px;
+    }
+}
+@media (max-width:375px){
+    .contact .contact-title{
+        font-size: 2.1rem;
+    }
+}
