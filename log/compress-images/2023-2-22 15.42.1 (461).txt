@@ -1,0 +1,13 @@
+File from: [resources/img/**/*.{jpg,JPG,jpeg,JPEG}]
+
+File to: [-]
+
+Compression algorithm: [-]
+
+Description:  Directory is empty!: File from: [resources/img/**/*.{jpg,JPG,jpeg,JPEG}]
+
+File to: [-]
+
+Compression algorithm: [-]
+
+Description:  Directory is empty!: 

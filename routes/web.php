@@ -9,7 +9,7 @@ use App\Http\Controller\Contato;
 
 use App\Http\Controllers\ContactController;
 use App\Models\Post;
-
+use App\Http\Controllers\LocalizationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +29,8 @@ Route::get('/faq', [Faq::class, 'faq']) ->name('faq');
 Route::resource('/contato', ContactController::class);
 
 
+
+Route::get("locale/{lange}", [LocalizationController::class, 'setLang']);
 
 
 

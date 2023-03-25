@@ -13,6 +13,12 @@
             <li><a href={{URL('/servicos')}}>Serviços</a></li>
             <li><a href={{URL('/faq')}}>Faq</a></li>
             <li><a href={{URL('/contato')}}>Contatos</a></li>
+            <li class="language">
+                {{-- <a href="#" onclick="doGTranslate('pt|pt');return false;" title="Portuguese" class="glink nturl notranslate"><img src="{{URL('images/header/brasil.svg')}}" height="24" width="24" alt="Portuguese" /></a>
+                <a href="#" onclick="doGTranslate('pt|en');return false;" title="English" class="glink nturl notranslate"><img src="{{URL('images/header/estados-unidos.svg')}}" height="24" width="24" alt="English" /></a> --}}
+                <a href="{{URL('locale/pt')}}" style="width: 100%" ><img style="width: 22px; height:22px;" src="{{URL('img/global/brasil.svg')}}" alt="Traduzir para pt"></a>
+                <a href="{{URL('locale/en')}}"><img style="width: 22px; height:22px;" src="{{URL('img/global/estados-unidos.svg')}}" alt="Traduzir para en"></a>
+            </li>
             <li class="consult-an-expert"><a href="">Area do Cliente</a></li>
         </ul>
     </nav>

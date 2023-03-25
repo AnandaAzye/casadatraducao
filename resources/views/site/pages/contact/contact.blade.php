@@ -6,14 +6,7 @@
         <form action="{{route('contato.store')}}" method="POST">
            {{ csrf_field() }}
 
-           @if (count($errors) > 0)
-             <p>Preencha os dados corretamente</p>
-             <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{$error}}</li>
-                @endforeach
-             </ul>
-           @endif
+
            @if ($message = Session::get('success'))
             <p>Formulario enviado</p>
             {{$message}}
@@ -24,18 +17,23 @@
           @endif
             <label for="">
                 <input type="text" name="nome" placeholder="Nome:">
+                {{$errors && count($errors) > 0 ? $errors->all()[0] : ''}}
             </label>
             <span>
                 <label for="">
                     <input type="email" name="email" id="" placeholder="E-mail:">
+                    {{$errors && count($errors) > 0 ? $errors->all()[1] : ''}}
                 </label>
                 <label for="">
-                    <input type="tel" name="telefone" id="" placeholder="Telefone/Whatsapp">
+                    <input type="tel" name="telefone" id="" placeholder="Telefone:">
+                    {{$errors && count($errors) > 0 ? $errors->all()[2] : ''}}
                 </label>
             </span>
             <label for="">
-                <textarea name="mensagem" id="" cols="30" rows="10" placeholder="Mensagem"></textarea>
+                <textarea name="mensagem" id="" cols="30" rows="10" placeholder="Mensagem:"></textarea>
+                <p>{{$errors &&  count($errors) > 0 ? $errors->all()[3] : ''}}</p>
             </label>
+
             <input class="submit" type="submit" value="Enviar">
         </form>
         <div class="contact-info">

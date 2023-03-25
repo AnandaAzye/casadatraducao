@@ -1,7 +1,7 @@
 <section>
    <div class="container-services">
     <div class="container-main">
-        <h2 class="container-services__title">Nossas Soluções</h2>
+        <h2 class="container-services__title">@lang('pages/home.solucoes')</h2>
         <div class="container-services__card">
             @foreach ($card as $item)
                 <a class="card" href=" ">

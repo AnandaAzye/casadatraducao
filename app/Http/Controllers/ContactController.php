@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendMail;
+use App\Models\ContactForm;
+
 // use App\Mail\SendMail;
 
 class ContactController extends Controller
@@ -52,6 +54,13 @@ class ContactController extends Controller
         );
 
         // @dd($data);
+
+        $ContactForm = new ContactForm();
+        $ContactForm->nome = $request->nome;
+        $ContactForm->email = $request->email;
+        $ContactForm->numero = $request->telefone;
+        $ContactForm->assunto = $request->mensagem;
+        $ContactForm->save();
 
         Mail::to(config('mail.from.address'))
         ->send(new SendMail($data));

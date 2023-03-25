@@ -1,7 +1,7 @@
 <section>
     <div class="container-partners">
         <div class="container-main">
-            <h2 class="container-partners__title">Parceiros</h2>
+            <h2 class="container-partners__title">@lang('pages/home.parceiros')</h2>
             <div class="container-partners__slide">
                 <!-- Slider main container -->
                 <div class="swiper partners">
