@@ -16,7 +16,11 @@
                       @endif
                     </span>
                     <h2>
-                        {{$item->post_title}}
+                        @if (app()->getLocale() == 'pt')
+                            {{$item->post_title}}
+                        @else
+                            {{$item->acf->titulo_em_ingles}}
+                        @endif
                     </h2>
                     <button>
                         <div class="btn-card">
@@ -28,7 +32,12 @@
                 </div>
                 <div class="container-content">
                     <p>
-                        {{$item->post_content}}
+
+                        @if (app()->getLocale() == 'pt')
+                                {{$item->post_content}}
+                            @else
+                                {{$item->acf->texto_em_ingles}}
+                            @endif
                     </p>
                 </div>
             </div>
@@ -42,10 +51,10 @@
     <div class="container-about__cta">
         <div class="container-main">
             <img src="{{URL('img/global/soliciteorç.png')}}" alt="">
-            <h2>Solicite Orçamento</h2>
+            <h2>@lang('pages/includes/cta/cta.orcamento.titulo')</h2>
             <a href="">
                 <button>
-                    Fale Conosco
+                    @lang('pages/includes/cta/cta.orcamento.botao')
                 </button>
             </a>
         </div>

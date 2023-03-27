@@ -8,11 +8,11 @@
         </button>
         <ul class="nav-header__list" id="menu" role="menu">
             <li class="occupation-area">
-                <a href={{URL('/quem-somos')}}>Quem Somos</a>
+                <a href={{URL('/quem-somos')}}>@lang('pages/includes/header/header.menu.item_1')</a>
             </li>
-            <li><a href={{URL('/servicos')}}>Serviços</a></li>
-            <li><a href={{URL('/faq')}}>Faq</a></li>
-            <li><a href={{URL('/contato')}}>Contatos</a></li>
+            <li><a href={{URL('/servicos')}}>@lang('pages/includes/header/header.menu.item_2')</a></li>
+            <li><a href={{URL('/faq')}}>@lang('pages/includes/header/header.menu.item3')</a></li>
+            <li><a href={{URL('/contato')}}>@lang('pages/includes/header/header.menu.item4')</a></li>
             <li class="language">
                 {{-- <a href="#" onclick="doGTranslate('pt|pt');return false;" title="Portuguese" class="glink nturl notranslate"><img src="{{URL('images/header/brasil.svg')}}" height="24" width="24" alt="Portuguese" /></a>
                 <a href="#" onclick="doGTranslate('pt|en');return false;" title="English" class="glink nturl notranslate"><img src="{{URL('images/header/estados-unidos.svg')}}" height="24" width="24" alt="English" /></a> --}}

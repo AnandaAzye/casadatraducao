@@ -1,7 +1,25 @@
-<x-Breadcrumb text='Contato'></x-Breadcrumb>
+<div class="container-breadcrumb">
+    <div class="container-main">
+        <div class="breadcrumb-content">
+            <ul>
+                <li>
+                    <a href="dadsadaS">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="dasdsadsadsadasd">
+                        @lang('pages/contato.contato')
+                    </a>
+                </li>
+            </ul>
+            <h1> @lang('pages/contato.contato')</h1>
+        </div>
+    </div>
+</div>
 <main class="contact">
    <div class="container-main">
-    <h2 class="contact-title">Fale Conosco</h2>
+    <h2 class="contact-title">@lang('pages/contato.titulo')</h2>
     <div class="container-form">
         <form action="{{route('contato.store')}}" method="POST">
            {{ csrf_field() }}
@@ -16,25 +34,25 @@
             <p>opssss!</p> {{$message}}
           @endif
             <label for="">
-                <input type="text" name="nome" placeholder="Nome:">
+                <input type="text" name="nome" placeholder="@lang('pages/contato.form.nome')">
                 {{$errors && count($errors) > 0 ? $errors->all()[0] : ''}}
             </label>
             <span>
                 <label for="">
-                    <input type="email" name="email" id="" placeholder="E-mail:">
+                    <input type="email" name="email" id="" placeholder="@lang('pages/contato.form.email')">
                     {{$errors && count($errors) > 0 ? $errors->all()[1] : ''}}
                 </label>
                 <label for="">
-                    <input type="tel" name="telefone" id="" placeholder="Telefone:">
+                    <input type="tel" name="telefone" id="" placeholder="@lang('pages/contato.form.telefone')">
                     {{$errors && count($errors) > 0 ? $errors->all()[2] : ''}}
                 </label>
             </span>
             <label for="">
-                <textarea name="mensagem" id="" cols="30" rows="10" placeholder="Mensagem:"></textarea>
+                <textarea name="mensagem" id="" cols="30" rows="10" placeholder="@lang('pages/contato.form.mensagem')"></textarea>
                 <p>{{$errors &&  count($errors) > 0 ? $errors->all()[3] : ''}}</p>
             </label>
 
-            <input class="submit" type="submit" value="Enviar">
+            <input class="submit" type="submit" value="@lang('pages/contato.form.enviar')">
         </form>
         <div class="contact-info">
            <a href="">
@@ -43,7 +61,7 @@
                     <svg fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M11.748 5.773S11.418 5 10.914 5c-.496 0-.754.229-.926.387S6.938 7.91 6.938 7.91s-.837.731-.773 2.106c.054 1.375.323 3.332 1.719 6.058 1.386 2.72 4.855 6.876 7.047 8.337 0 0 2.031 1.558 3.921 2.191.549.173 1.647.398 1.903.398.26 0 .719 0 1.246-.385.536-.389 3.543-2.807 3.543-2.807s.736-.665-.119-1.438c-.859-.773-3.467-2.492-4.025-2.944-.559-.459-1.355-.257-1.699.054-.343.313-.956.828-1.031.893-.112.086-.419.365-.763.226-.438-.173-2.234-1.148-3.899-3.426-1.655-2.276-1.837-3.02-2.084-3.824a.56.56 0 0 1 .225-.657c.248-.172 1.161-.933 1.161-.933s.591-.583.344-1.27-1.906-4.716-1.906-4.716z"/></svg>
                 </span>
                  <span>
-                    <p class="contact-info__text">Número de Telefone</p>
+                    <p class="contact-info__text">@lang('pages/contato.numero_telefone')</p>
                     <p>+598 94 705 183</p>
                  </span>
             </a>
@@ -56,7 +74,7 @@
                 </span>
 
                  <span>
-                    <p class="contact-info__text">Número de Whatsapp</p>
+                    <p class="contact-info__text">@lang('pages/contato.numero_whatsapp')</p>
                     <p>+598 94 705 183</p>
                  </span>
             </a>
@@ -68,10 +86,10 @@
     <div class="container-about__cta">
         <div class="container-main">
             <img src="{{URL('img/global/soliciteorç.png')}}" alt="">
-            <h2>Solicite Orçamento</h2>
+            <h2>@lang('pages/includes/cta/cta.orcamento.titulo')</h2>
             <a href="">
                 <button>
-                    Fale Conosco
+                    @lang('pages/includes/cta/cta.orcamento.botao')
                 </button>
             </a>
         </div>

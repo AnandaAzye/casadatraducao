@@ -1,6 +1,6 @@
 <main class="slide-home">
     <!-- Slider main container -->
-<div class="swiper">
+<div class="swiper home">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->
@@ -14,10 +14,24 @@
                 </div>
                 <div class="container-main">
                   <div class="slide-home_content">
-                        <h2><span>{{$item->post_title}}</span></h2>
+                      <h2>
+                          <span>
+
+                              @if (app()->getLocale() == 'pt')
+                                {{$item->post_title}}
+                               @else
+                               {{$item->acf->titulo_em_ingles}}
+                               @endif
+                            </span>
+                        </h2>
+
                         <a href="" class="default-button">
                             <button>
-                                {{$item->acf->texto}}
+                                @if (app()->getLocale() == 'pt')
+                                    {{$item->acf->texto}}
+                                @else
+                                    {{$item->acf->texto_do_botao_em_ingles}}
+                                @endif
                             </button>
                         </a>
                    </div>

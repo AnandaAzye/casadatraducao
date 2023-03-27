@@ -1,0 +1,70 @@
+.vagas{
+    padding: 0 1rem;
+    .container-main {
+        padding: 2rem 0;
+        display: flex;
+        justify-content:space-between;
+        h2{
+            font-size: 2rem;
+            // color: $pink;
+            font-family: $font-Lemon;
+            text-transform: uppercase;
+        }
+        .search{
+
+                input, select{
+                    padding: .7rem .7rem;
+                    border-radius: 5px;
+                    font-weight: 700;
+                    border: none;
+                    outline: 2px solid $pink;
+                    background: transparent;
+                    min-width: 250px;
+                    height: 40px;
+                    &::placeholder{
+                        color: black;
+                        opacity: 100%;
+                    }
+                }
+                .vagas-input{
+                    position:relative;
+                    margin-left: 20px;
+                    button{
+                        position: absolute;
+                        right: 10px;
+                        background-color: transparent;
+                        border: none;
+                        top: -4px;
+                    }
+                }
+
+        }
+
+    }
+}
+
+@media (max-width: 800px ) {
+    .vagas .container-main{
+        flex-direction: column;
+        align-items: center;
+        h2{
+            margin-bottom: 1rem;
+
+        }
+    }
+}
+
+@media (max-width: 576px){
+    .vagas .container-main .search{
+        flex-direction: column-reverse;
+        align-items: center;
+        display: flex;
+        .vagas-input{
+            margin-left: 0px;
+            margin-bottom: 1rem;
+            button{
+                top: 6px;
+            }
+        }
+    }
+}

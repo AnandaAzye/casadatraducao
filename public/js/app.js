@@ -19498,10 +19498,10 @@ setTimeout(function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var swiper = new Swiper('.swiper', {
+var swiper = new Swiper('.swiper.home', {
   // Optional parameters
   direction: 'horizontal',
-  loop: true,
+  slidesPerView: 1,
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
@@ -19567,17 +19567,6 @@ var swiper2 = new Swiper('.swiper.partners', {
 
 /***/ }),
 
-/***/ "./resources/scss/pages/contato/index.scss":
-/*!*************************************************!*\
-  !*** ./resources/scss/pages/contato/index.scss ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "./resources/scss/pages/faq/index.scss":
 /*!*********************************************!*\
   !*** ./resources/scss/pages/faq/index.scss ***!
@@ -19611,19 +19600,30 @@ var swiper2 = new Swiper('.swiper.partners', {
 
 /***/ }),
 
+/***/ "./resources/scss/pages/vagas/index.scss":
+/*!***********************************************!*\
+  !*** ./resources/scss/pages/vagas/index.scss ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!********************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/scss/pages/home/index.scss ./resources/scss/pages/about/index.scss ./resources/scss/pages/service/index.scss ./resources/scss/pages/faq/index.scss ./resources/scss/pages/contato/index.scss ***!
-  \********************************************************************************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/scss/pages/home/index.scss ./resources/scss/pages/about/index.scss ./resources/scss/pages/service/index.scss ./resources/scss/pages/faq/index.scss ./resources/scss/pages/vagas/index.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Xampp\htdocs\att-casa\casadatraducao\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! D:\Xampp\htdocs\att-casa\casadatraducao\resources\scss\pages\home\index.scss */"./resources/scss/pages/home/index.scss");
-__webpack_require__(/*! D:\Xampp\htdocs\att-casa\casadatraducao\resources\scss\pages\about\index.scss */"./resources/scss/pages/about/index.scss");
-__webpack_require__(/*! D:\Xampp\htdocs\att-casa\casadatraducao\resources\scss\pages\service\index.scss */"./resources/scss/pages/service/index.scss");
-__webpack_require__(/*! D:\Xampp\htdocs\att-casa\casadatraducao\resources\scss\pages\faq\index.scss */"./resources/scss/pages/faq/index.scss");
-module.exports = __webpack_require__(/*! D:\Xampp\htdocs\att-casa\casadatraducao\resources\scss\pages\contato\index.scss */"./resources/scss/pages/contato/index.scss");
+__webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\scss\pages\home\index.scss */"./resources/scss/pages/home/index.scss");
+__webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\scss\pages\about\index.scss */"./resources/scss/pages/about/index.scss");
+__webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\scss\pages\service\index.scss */"./resources/scss/pages/service/index.scss");
+__webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\scss\pages\faq\index.scss */"./resources/scss/pages/faq/index.scss");
+module.exports = __webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\scss\pages\vagas\index.scss */"./resources/scss/pages/vagas/index.scss");
 
 
 /***/ })

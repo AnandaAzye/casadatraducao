@@ -17,7 +17,7 @@ function home()
         'labels' => array('name' => 'Banners Home'),
         'public' => true,
         'menu_position' => 0,
-        'supports' => array('title', 'editor', 'thumbnail'),
+        'supports' => array('title', 'edito   r', 'thumbnail'),
         'menu_icon' => 'dashicons-welcome-write-blog'
     ));
 };

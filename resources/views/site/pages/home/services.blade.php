@@ -8,7 +8,13 @@
                     <div class="container-services__image">
                         <img src="{{$item->image}}" alt="">
                     </div>
-                    <h2>{{$item->post_title}}</h2>
+                    <h2>
+                        @if (app()->getLocale() == 'pt')
+                            {{$item->post_title}}
+                        @else
+                            {{$item->acf->titulo_em_ingles}}
+                        @endif
+                    </h2>
                     <span class="container-services__button">
                         <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <line x1="15.3008" x2="15.3008" y2="29" stroke="white" stroke-width="3"/>
