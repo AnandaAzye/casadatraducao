@@ -453,6 +453,139 @@ button.nav-header_button-mobile {
   }
 }
 
+.container-pagination {
+  max-width: 500px;
+  margin: 3rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+.container-pagination .pagination {
+  display: flex;
+  align-items: center;
+}
+
+.container-pagination .pagination li {
+  list-style: none;
+}
+
+.container-pagination .pagination li a {
+  text-decoration: none;
+}
+
+.container-pagination .pagination .pagination-pages {
+  background-color: #ED1556;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+
+.container-pagination .pagination .pagination-pages li + li {
+  margin-left: 10px;
+}
+
+.container-pagination .pagination .select,
+.container-pagination .pagination .active {
+  background: white;
+  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.13);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-pagination .pagination .select a,
+.container-pagination .pagination .active a {
+  color: #ED1556;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.container-pagination .pagination .active {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.container-pagination .pagination .active a {
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.container-pagination .pagination .pagination-prev-btn,
+.container-pagination .pagination .pagination-next-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.container-pagination .pagination .pagination-prev-btn a,
+.container-pagination .pagination .pagination-next-btn a {
+  text-decoration: none;
+}
+
+.container-pagination .pagination .pagination-prev-btn span,
+.container-pagination .pagination .pagination-next-btn span {
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #ED1556;
+}
+
+@media (max-width: 480px) {
+  .blog-cards .container-contents .blog-card-item {
+    padding: 1.5rem 1rem;
+  }
+
+  .blog-cards .container-contents .blog-card-item .card-image {
+    height: auto;
+  }
+
+  .blog-cards .container-contents .blog-card-item {
+    position: relative;
+  }
+
+  .blog-cards .container-contents .blog-card-item::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background-color: green;
+    right: 0;
+  }
+
+  .blog-cards .container-contents .blog-card-item:last-child::after {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .container-pagination .pagination-prev-btn span,
+  .container-pagination .pagination-next-btn span {
+    display: none;
+  }
+
+  .container-pagination .pagination-prev-btn {
+    margin-right: 10px;
+  }
+
+  .container-pagination .pagination-next-btn {
+    margin-left: 10px;
+  }
+
+  .blog-cards .container-contents .blog-card-item .card-title {
+    font-size: 17px;
+  }
+}
+
 .vagas {
   padding: 0 1rem;
 }
@@ -492,6 +625,14 @@ button.nav-header_button-mobile {
   opacity: 100%;
 }
 
+.vagas .container-main .search select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url(/images/select.png?ad71746a8ff58b4da7d1fcbd56b8820f) no-repeat;
+  background-position: 97%;
+}
+
 .vagas .container-main .search .vagas-input {
   position: relative;
   margin-left: 20px;
@@ -503,6 +644,36 @@ button.nav-header_button-mobile {
   background-color: transparent;
   border: none;
   top: -4px;
+}
+
+.container-erro__search {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container-erro__search .erro-search {
+  font-size: 1.2rem;
+}
+
+.container-erro__search .erro-search span {
+  color: #ED1556;
+}
+
+.container-erro__search a button {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background: #ED1556;
+  font-size: 1rem;
+  margin-top: 0.9rem;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+.container-erro__search a button:hover {
+  transform: scale(0.988);
 }
 
 @media (max-width: 800px) {
@@ -533,18 +704,123 @@ button.nav-header_button-mobile {
   }
 }
 
+.container-main .container-card {
+  width: 100%;
+}
+
 .container-main .container-card .card-vagas {
   display: block;
-  max-width: 600px;
-  margin: 0 auto 1rem auto;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: 0.3s ease-in-out;
 }
 
 .container-main .container-card .card-vagas h3 {
   text-align: center;
   font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+
+.container-main .container-card .card-vagas:hover {
+  transform: scale(0.991);
+}
+
+.container-main .container-card .card-vagas p.card-vagas__description {
+  font-size: 0.875em;
+  line-height: 1.25em;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.container-main .container-card .card-vagas p.card-vagas__description::after {
+  content: "";
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  left: 0;
+  z-index: 11;
+  background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  position: absolute;
+}
+
+.container-main .container-card .card-vagas .card-vagas__options {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 0;
+}
+
+.container-main .container-card .card-vagas .card-vagas__options .card-vaga__recolher {
+  display: none;
+  color: #ED1556;
+}
+
+.container-main .container-card .card-vagas .card-vagas__options .card-vaga__ver {
+  color: #ED1556;
+}
+
+.container-main .container-card .card-vagas .card-vagas__button {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.container-main .container-card .card-vagas .card-vagas__button button {
+  padding: 0.6rem 1.3rem;
+  background: #ED1556;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.container-form {
+  max-width: 1000px;
+  padding: 3rem;
+  margin: 3rem auto;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.container-form span {
+  display: block;
+  font-weight: bold;
+}
+
+.container-form label {
+  margin-top: 0.9rem;
+  display: block;
+}
+
+.container-form label span {
+  margin-bottom: 0.2rem;
+}
+
+.container-form .form-vaga__input,
+.container-form select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ED1556;
+}
+
+.container-form .flex-input {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.container-form .flex-input input {
+  width: 440px;
 }
 

@@ -62,9 +62,11 @@ class ContactController extends Controller
         $ContactForm->assunto = $request->mensagem;
         $ContactForm->save();
 
-        Mail::to(config('mail.from.address'))
-        ->send(new SendMail($data));
+        Mail::to('joaohenrique17k@outlook.com')->send(new SendMail($data));
         return back()->with('success', 'Obrigado por nos contactar');
+
+
+
     }
 
     /**

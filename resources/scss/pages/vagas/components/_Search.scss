@@ -26,6 +26,11 @@
                         opacity: 100%;
                     }
                 }
+                select{
+                    appearance: none;
+                    background: url('../../../../img/global/select.png') no-repeat;
+                    background-position: 97%;
+                }
                 .vagas-input{
                     position:relative;
                     margin-left: 20px;
@@ -40,6 +45,35 @@
 
         }
 
+    }
+}
+
+
+.container-erro__search{
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    .erro-search{
+        font-size: 1.2rem;
+        span{
+            color: $pink;
+        }
+    }
+    a{
+        button{
+            padding: .7rem 1rem;
+            border: none;
+            border-radius: 5px;
+            background: $pink;
+            font-size: 1rem;
+            margin-top: .9rem   ;
+            color: white;
+            font-weight: bold;
+            transition: $transion;
+            &:hover{
+                transform: scale(.988);
+            }
+        }
     }
 }
 

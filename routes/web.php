@@ -9,6 +9,7 @@ use App\Http\Controller\Contato;
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Vagas;
+use App\Http\Controllers\ContactVaga;
 use App\Models\Post;
 use App\Http\Controllers\LocalizationController;
 
@@ -29,7 +30,7 @@ Route::get('/servicos', [Service::class, 'service']) ->name('service');
 Route::get('/faq', [Faq::class, 'faq']) ->name('faq');
 Route::resource('/contato', ContactController::class);
 Route::get("locale/{lange}", [LocalizationController::class, 'setLang']);
-Route::get('/vagas',  [Vagas::class, 'vagas']);
-
+Route::get('/vagas',  [Vagas::class, 'vagas'])->name('vagas');
+Route::resource('/vagas/{id}', ContactVaga::class);
 
 

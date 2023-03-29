@@ -19386,10 +19386,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _slide__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_slide__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _faq__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./faq */ "./resources/js/faq.js");
 /* harmony import */ var _faq__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_faq__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./form */ "./resources/js/form.js");
+/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_form__WEBPACK_IMPORTED_MODULE_3__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
+
+// import './search';
 
 /***/ }),
 
@@ -19450,6 +19454,52 @@ card.forEach(function (card, indexC) {
         }
       }
     });
+  });
+});
+
+/***/ }),
+
+/***/ "./resources/js/form.js":
+/*!******************************!*\
+  !*** ./resources/js/form.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+  $("#telefone").mask('(00) 00000-0000');
+  $("#cpf").mask('000.000.000-00');
+  $("#cep").mask('00000-000');
+  $('form').validate({
+    rules: {
+      nome: {
+        required: true
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      telefone: {
+        required: true
+      },
+      cpf: {
+        required: true
+      },
+      endereco: {
+        required: true
+      },
+      cep: {
+        required: true
+      }
+    },
+    messages: {
+      nome: "Por favor, insira seu nome",
+      email: "Por favor, insira um email válido",
+      telefone: "Por favor, insira um número para contato",
+      cpf: "Por favor, insira seu CPF",
+      endereco: "Por favor, insira seu endereço",
+      cep: "Por favor, informe seu CEP"
+    }
   });
 });
 
@@ -19618,12 +19668,12 @@ var swiper2 = new Swiper('.swiper.partners', {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\scss\pages\home\index.scss */"./resources/scss/pages/home/index.scss");
-__webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\scss\pages\about\index.scss */"./resources/scss/pages/about/index.scss");
-__webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\scss\pages\service\index.scss */"./resources/scss/pages/service/index.scss");
-__webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\scss\pages\faq\index.scss */"./resources/scss/pages/faq/index.scss");
-module.exports = __webpack_require__(/*! D:\Programas\XAMPP\htdocs\new-casa\casadatraducao\resources\scss\pages\vagas\index.scss */"./resources/scss/pages/vagas/index.scss");
+__webpack_require__(/*! D:\Xampp\htdocs\att-casa\casadatraducao\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! D:\Xampp\htdocs\att-casa\casadatraducao\resources\scss\pages\home\index.scss */"./resources/scss/pages/home/index.scss");
+__webpack_require__(/*! D:\Xampp\htdocs\att-casa\casadatraducao\resources\scss\pages\about\index.scss */"./resources/scss/pages/about/index.scss");
+__webpack_require__(/*! D:\Xampp\htdocs\att-casa\casadatraducao\resources\scss\pages\service\index.scss */"./resources/scss/pages/service/index.scss");
+__webpack_require__(/*! D:\Xampp\htdocs\att-casa\casadatraducao\resources\scss\pages\faq\index.scss */"./resources/scss/pages/faq/index.scss");
+module.exports = __webpack_require__(/*! D:\Xampp\htdocs\att-casa\casadatraducao\resources\scss\pages\vagas\index.scss */"./resources/scss/pages/vagas/index.scss");
 
 
 /***/ })

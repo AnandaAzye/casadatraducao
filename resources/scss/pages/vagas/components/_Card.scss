@@ -1,19 +1,74 @@
 .container-main{
     .container-card{
+        width: 100%;
         .card-vagas{
             display: block;
-            max-width: 600px;
-            margin: 0 auto 1rem auto;
-
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
             padding:2rem;
             border-radius: 10px;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            transition: $transion;
             h3{
                 text-align: center;
                 font-size: 1.5rem;
                 margin-bottom: 1rem;
             }
+            &:hover{
+                transform: scale(.991);
+            }
+            p.card-vagas__description {
+                font-size: 0.875em;
+                line-height: 1.25em;
+                height: 150px;
+                overflow: hidden;
+                position: relative;
+                display: block;
+                width: 100%;
+                &::after{
+                    content: '';
+                    width: 100%;
+                    height: 50px;
+                    bottom: 0;
+                    left: 0 ;
+
+                    z-index: 11;
+                     background: linear-gradient(0deg, #fff 0%, rgba(255,255,255,0) 100%);;
+                    position: absolute;
+                }
+            }
+            .card-vagas__options{
+                display: flex;
+                justify-content: flex-end;
+                padding: .5rem 0;
+                .card-vaga__recolher{
+                    display: none;
+                    color: $pink;
+                }
+                .card-vaga__ver{
+                    color: $pink;
+                }
+            }
+
+            .card-vagas__button{
+                display: flex;
+                justify-content: center;
+                text-decoration: none;
+                button{
+                    padding: .6rem 1.3rem;
+                    background: $pink;
+                    border: none;
+                    border-radius: 10px;
+                    color: white;
+                    font-weight: 900;
+                    font-family: $font-Montserrat;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    margin-top: 1rem;
+                }
+            }
         }
 
     }
+
 }
