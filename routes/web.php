@@ -5,9 +5,10 @@ use App\Http\Controllers\Home;
 use App\Http\Controllers\About;
 use App\Http\Controllers\Service;
 use App\Http\Controllers\Faq;
-use App\Http\Controller\Contato;
+
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Documentos;
 use App\Http\Controllers\Vagas;
 use App\Http\Controllers\ContactVaga;
 use App\Models\Post;
@@ -32,5 +33,5 @@ Route::resource('/contato', ContactController::class);
 Route::get("locale/{lange}", [LocalizationController::class, 'setLang']);
 Route::get('/vagas',  [Vagas::class, 'vagas'])->name('vagas');
 Route::resource('/vagas/{id}', ContactVaga::class);
-
+Route::get('/a', [Documentos::class, 'documentos'])-name
 

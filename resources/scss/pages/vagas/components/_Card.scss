@@ -17,14 +17,13 @@
             &:hover{
                 transform: scale(.991);
             }
-            p.card-vagas__description {
-                font-size: 0.875em;
-                line-height: 1.25em;
-                height: 150px;
+            p{
+                margin-bottom: .5rem;
+            }
+            .card-vagas__description-card{
+                height: 170px;
                 overflow: hidden;
                 position: relative;
-                display: block;
-                width: 100%;
                 &::after{
                     content: '';
                     width: 100%;
@@ -36,6 +35,21 @@
                      background: linear-gradient(0deg, #fff 0%, rgba(255,255,255,0) 100%);;
                     position: absolute;
                 }
+            }
+            .card-vagas__description-card.active{
+                &::after{
+                    display: none;
+                }
+            }
+            p.card-vagas__description {
+                font-size: 0.875em;
+                line-height: 1.25em;
+                // height: 150px;
+                overflow: hidden;
+                position: relative;
+                display: block;
+                width: 100%;
+
             }
             .card-vagas__options{
                 display: flex;

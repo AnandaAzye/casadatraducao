@@ -80,7 +80,7 @@ return [
         'wordpress' => [ // for WordPress database (used by Corcel)
             'driver'    => 'mysql',
             'host'      => 'localhost',
-            'database'  => 'test',
+            'database'  => 'casadatraducao',
             'username'  => 'root',
             'password'  => '',
             'charset'   => 'utf8',

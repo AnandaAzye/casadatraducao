@@ -728,17 +728,17 @@ button.nav-header_button-mobile {
   transform: scale(0.991);
 }
 
-.container-main .container-card .card-vagas p.card-vagas__description {
-  font-size: 0.875em;
-  line-height: 1.25em;
-  height: 150px;
-  overflow: hidden;
-  position: relative;
-  display: block;
-  width: 100%;
+.container-main .container-card .card-vagas p {
+  margin-bottom: 0.5rem;
 }
 
-.container-main .container-card .card-vagas p.card-vagas__description::after {
+.container-main .container-card .card-vagas .card-vagas__description-card {
+  height: 170px;
+  overflow: hidden;
+  position: relative;
+}
+
+.container-main .container-card .card-vagas .card-vagas__description-card::after {
   content: "";
   width: 100%;
   height: 50px;
@@ -747,6 +747,19 @@ button.nav-header_button-mobile {
   z-index: 11;
   background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
   position: absolute;
+}
+
+.container-main .container-card .card-vagas .card-vagas__description-card.active::after {
+  display: none;
+}
+
+.container-main .container-card .card-vagas p.card-vagas__description {
+  font-size: 0.875em;
+  line-height: 1.25em;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  width: 100%;
 }
 
 .container-main .container-card .card-vagas .card-vagas__options {

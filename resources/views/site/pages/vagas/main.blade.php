@@ -28,14 +28,16 @@
 
             @foreach ($vagas as $vaga)
                 <div class="card-vagas">
-
                         <h3>
                             {{$vaga->post_title}}
                         </h3>
-                        <p class="card-vagas__description">
-                            {!!$vaga->post_content!!}
-                            {{-- {{ strip_tags(\Str::limit($vaga->post_content, 600, '...')) }} --}}
-                        </p>
+                        <div class="card-vagas__description-card">
+                            <p class="card-vagas__description">
+                                {!!$vaga->post_content!!}
+                                {{-- {{ strip_tags(\Str::limit($vaga->post_content, 600, '...')) }} --}}
+                            </p>
+                        </div>
+
                        <div class="card-vagas__options">
                             <span class="card-vaga__ver">ver mais</span>
                             <span class="card-vaga__recolher">recolher</span>
@@ -78,7 +80,7 @@
 <script>
     let ver = document.querySelectorAll('.card-vaga__ver');
     let recolher = document.querySelectorAll('.card-vaga__recolher');
-    let conteudo = document.querySelectorAll('.card-vagas__description')
+    let conteudo = document.querySelectorAll('.card-vagas__description-card')
 
     console.log(ver, recolher, conteudo)
     conteudo.forEach((item, index) => {
@@ -88,6 +90,7 @@
                     if((verIndex === index)){
                         item.style.height = "100%";
                         itemVer.style.display = "none";
+                        item.classList.add('active');
                         if(recolherIndex === index){
                             itemRecolher.style.display = "block"
                         }
@@ -98,6 +101,7 @@
                 if((recolherIndex === index)){
                     item.style.height = "150px"
                     itemVer.style.display = "block";
+                    item.classList.remove('active');
                     itemRecolher.style.display = "none"
                 }
             })
