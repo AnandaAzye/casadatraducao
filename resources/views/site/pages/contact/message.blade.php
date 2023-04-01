@@ -119,7 +119,7 @@
                     <td height="30"></td>
                 </tr>
                 <tr>
-                    <td width="600">
+                    <td width="800">
                         <table align="center" valign="center" width="500" border="0"
                             style="margin:0 auto; text-align: center;">
                             <tbody>

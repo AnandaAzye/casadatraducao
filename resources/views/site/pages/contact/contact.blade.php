@@ -39,16 +39,16 @@
             </label>
             <span>
                 <label for="">
-                    <input type="email" name="email" id="" placeholder="@lang('pages/contato.form.email')">
+                    <input id="email" type="email" name="email" id="" placeholder="@lang('pages/contato.form.email')">
                     {{$errors && count($errors) > 0 ? $errors->all()[1] : ''}}
                 </label>
                 <label for="">
-                    <input type="tel" name="telefone" id="" placeholder="@lang('pages/contato.form.telefone')">
+                    <input id="telefone"  type="tel" name="telefone" id="" placeholder="@lang('pages/contato.form.telefone')">
                     {{$errors && count($errors) > 0 ? $errors->all()[2] : ''}}
                 </label>
             </span>
             <label for="">
-                <textarea name="mensagem" id="" cols="30" rows="10" placeholder="@lang('pages/contato.form.mensagem')"></textarea>
+                <textarea name="sobre" id="" cols="30" rows="10" placeholder="@lang('pages/contato.form.mensagem')"></textarea>
                 <p>{{$errors &&  count($errors) > 0 ? $errors->all()[3] : ''}}</p>
             </label>
 

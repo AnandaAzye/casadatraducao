@@ -13,7 +13,7 @@ const compress_images = require('compress-images');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js').sass('resources/scss/pages/home/index.scss', 'public/css/home').sass('resources/scss/pages/about/index.scss', 'public/css/about').sass('resources/scss/pages/service/index.scss', 'public/css/service').sass('resources/scss/pages/faq/index.scss', 'public/css/faq').sass('resources/scss/pages/vagas/index.scss', 'public/css/vagas');
+mix.js('resources/js/app.js', 'public/js').sass('resources/scss/pages/home/index.scss', 'public/css/home').sass('resources/scss/pages/about/index.scss', 'public/css/about').sass('resources/scss/pages/service/index.scss', 'public/css/service').sass('resources/scss/pages/faq/index.scss', 'public/css/faq').sass('resources/scss/pages/vagas/index.scss', 'public/css/vagas').sass('resources/scss/pages/contato/index.scss', 'public/css/contato');
 
 
 mix.then(() => {

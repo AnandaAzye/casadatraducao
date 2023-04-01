@@ -24,6 +24,24 @@ $(document).ready(function() {
             },
             cep: {
                 required: true
+            },
+            tempo_parcial:{
+                required: true
+            },
+            tempo_integral:{
+                required: true
+            },
+            link_linkedin:{
+                required: true
+            }, 
+            sobre:{
+                required: true
+            },
+            termo_comunicacao:{
+                required:true
+            },
+            curriculo:{
+                required:true
             }
         },
         messages: {
@@ -32,7 +50,31 @@ $(document).ready(function() {
             telefone: "Por favor, insira um número para contato",
             cpf: "Por favor, insira seu CPF",
             endereco: "Por favor, insira seu endereço",
-            cep: "Por favor, informe seu CEP"
-        }
+            cep: "Por favor, informe seu CEP",
+            tempo_parcial: 'Por favor, preencha o campo',
+            tempo_integral: 'Por favor, preencha o campo',
+            link_linkedin: 'Por favor, informe seu Linkedln',
+            sobre:'Por favor, preencha o campo!',
+            termo_comunicacao:'Por favor, preencha o campo!',
+            curriculo:'Por favor, informe o seu curriculo'
+
+        },
+        errorPlacement: function(error, element) 
+        {
+            if ( element.is(":radio") || element.is(':file') ) 
+            {
+                // error.appendTo( element.parents('.radio') );
+                error.appendTo( element.parents('.radio') );
+                error.appendTo( element.parents('.radio1') );
+                error.appendTo( element.parents('.radio2') );
+                error.appendTo( element.parents('.curriculo') );
+            }
+            else 
+            { // This is the default behavior 
+                error.insertAfter( element );
+            }
+         }
+      });
+    
     })
-})
+

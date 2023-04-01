@@ -8,13 +8,14 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\SendVagasMail;
 use App\Models\VagaForm;
 use App\Models\Post;
+use Illuminate\Support\Str;
 class ContactVaga extends Controller
 {
     public function index($id){
         $paises = json_decode(Storage::get('public/paises.json'));
         $posts = Post::published()->whereIn('post_type', ['vagas'])->distinct()->orderBy('menu_order')->paginate(40);
         $vagas = [];
-        $vagaSelecionada;
+        $vagaSelecionada = '';
         foreach ($posts as $key => $post) {
             if($post->post_name != $id){
             array_push($vagas, $post->post_title);
@@ -32,7 +33,7 @@ class ContactVaga extends Controller
         }
 
           // "João da Silva Santos" -> "joao-da-silva-santos-{random}.pdf"
-        $fileName = \Str::slug($request->nome) . '-' . round(microtime(true)*1000) . '.' . $request->file('curriculo')->extension();
+        $fileName = Str::slug($request->nome) . '-' . round(microtime(true)*1000) . '.' . $request->file('curriculo')->extension();
         // Retorna o caminho onde foi guardado
         $file = $request->file('curriculo')->storeAs('curriculos', $fileName);
 
@@ -63,8 +64,8 @@ class ContactVaga extends Controller
         $VagaForm->curriculo = $file;
         $VagaForm->vaga_escolhida = $request->vaga;
         $VagaForm->save();
-        // Mail::to('joaohenrique17k@outlook.com')->send(new SendVagasMail($data));
-        return back()->with('success', 'Obrigado por nos contactar');
+        Mail::to('joaohenrique17k@outlook.com')->send(new SendVagasMail($data));
+        return back()->with('success', 'Currículo enviado com sucesso!');
 
 
     }
